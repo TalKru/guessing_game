@@ -52,7 +52,7 @@ guessing_game/
 3. **Run the game**:
 
    ```bash
-   python src.cli.py
+   python src\cli.py 
    ```
 
 4. **Run the test suite, in command line**:
@@ -118,4 +118,5 @@ Run `pytest` to see all tests pass. Coverage can be extended if needed.
    Author: Tal Kruchinin
    Date: 07.08.2025
    ```
+
 
