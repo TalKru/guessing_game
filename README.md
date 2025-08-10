@@ -17,14 +17,14 @@ guessing_game/
 ├── src/
 │   ├── __init__.py
 │   ├── game.py           # Core game logic and session tracking
-│   ├── storage.py        # SQLite data persistence layer
+│   ├── storage.py        # SQLite - DB
 │   └── cli.py            # Command-line interface (user interaction)
 ├── tests/
 │   ├── test_game.py      # Unit tests for game logic and session class
 │   └── test_storage.py   # Tests for database operations and leaderboard
-├── pytest.ini            # pytest configuration (adds src/ to PYTHONPATH)
-├── requirements.txt      # modules used in this project
-└── README.md             # This overview and usage guide
+├── pytest.ini            # pytest config
+├── requirements.txt      
+└── README.md             
 ```
 
 ---
@@ -39,7 +39,7 @@ guessing_game/
    .\.venv\Scripts\activate  # Windows
    ```
 
-2. **Install dependencies** (none beyond the standard library & pytest for tests):
+2. **Install dependencies** (Only for tests):
 
    ```bash
    pip install pytest
@@ -105,7 +105,7 @@ Automated tests are written using **pytest**:
 * **`tests/test_storage.py`**
 
   * Ensures `init_db()` creates the database file and schema.
-  * Validates saving sessions with controlled timestamps, then retrieving the top leaderboard entries in correct order.
+  * Validates saving sessions with controlled timestamps, then retrieves the top leaderboard entries in correct order.
   * Confirms that attempting to save an unsolved session raises a `ValueError`.
 
 Run `pytest` to see all tests pass. Coverage can be extended if needed.
@@ -114,9 +114,10 @@ Run `pytest` to see all tests pass. Coverage can be extended if needed.
 
 **Enjoy playing and analyzing your performance!**
    ```bash
-   Version: 1.0.0
+   Version: 1.0.1
    Author: Tal Kruchinin
    Date: 07.08.2025
    ```
+
 
 
